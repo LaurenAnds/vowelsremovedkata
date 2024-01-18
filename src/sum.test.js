@@ -1,12 +1,28 @@
-import { sum } from "./sum.js";
+import { removeVowels } from "./sum.js";
 
 // jest docs for expect "matchers"
 // https://jestjs.io/docs/expect
 
-test("adds 1 + 2 to equal 3", () => {
-    expect(sum(1, 2)).toBe(3);
+test("remove vowels from string ", () => {
+    expect(removeVowels("Kenny")).toBe("Knny");
 });
 
-test("adds 10 + 20 to equal 30", () => {
-    expect(sum(10, 20)).toBe(30);
+test("remove vowels from string", () => {
+    expect(removeVowels("Lauren")).toBe("Lrn");
+});
+
+test("remove vowels from string", () => {
+    expect(removeVowels("")).toBe("");
+});
+
+test("remove vowels from string", () => {
+    expect(removeVowels("NEILL")).toBe("NLL");
+});
+
+test("remove vowels from string", () => {
+    expect(removeVowels("Exaggerate")).toBe("xggrt");
+});
+
+test("remove vowels from string", () => {
+    expect(removeVowels("i like steak")).toBe(" lk stk");
 });
